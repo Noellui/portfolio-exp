@@ -90,7 +90,6 @@ export default function Home() {
         
         {/* PROFILE IMAGE SLOT */}
         <div className="relative group">
-          {/* High-tech ambient ring */}
           <div className="absolute -inset-1.5 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           
           <div className="relative h-44 w-44 md:h-52 md:w-52 rounded-full border-4 border-slate-900 bg-slate-900 overflow-hidden shadow-2xl">
@@ -101,11 +100,41 @@ export default function Home() {
             />
           </div>
           
-          {/* Branding Tag */}
           <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-sky-500 text-slate-950 text-[10px] font-bold px-4 py-1.5 rounded-full border-2 border-slate-950 uppercase tracking-widest shadow-lg">
             Noel
           </div>
         </div>
+
+        {/* --- CONSOLIDATED CONTENT SECTION --- */}
+        <div className="max-w-3xl mx-auto space-y-6 text-slate-300 text-sm md:text-base leading-relaxed bg-slate-900/30 p-8 rounded-3xl border border-slate-800/50 backdrop-blur-sm">
+          <p>
+            Welcome to my Digital Canvas, where I paint my ideas and blend innovation with imagination. 
+            A space where I launch my curiosity into the world of applications — transforming concepts into experiences.
+          </p>
+          <p>
+            As a BCA student driven by a passion for building practical, real-world solutions, I work as a 
+            full-stack developer crafting responsive web applications with React, Python (Django), and SQL. 
+            My approach emphasizes clean architecture, scalability, and meaningful user experiences.
+          </p>
+          <p>
+            Beyond development, I have a strong interest in systems and networking. As a Linux power user, 
+            I’ve configured Ubuntu home servers, customized Arch Linux on Mac hardware, and gained hands-on 
+            experience in server administration. From managing user permissions to implementing secure 
+            remote access solutions with Tailscale, I enjoy understanding technology from the inside out 
+            — and I’m always eager to explore more.
+          </p>
+          <p>Outside the world of coding, you’ll often find me on the badminton court, lost in a book, or listening to music.
+
+For me, technology is not just about writing code; it’s about creating solutions that truly matter. And this is only the beginning of my journey in this ever-evolving world. Learning never stops — and neither do I.</p>
+          <p className="pt-2 border-t border-slate-800/50 text-slate-400 italic">
+            Among my key projects is a Blood Donation Management System, architected to efficiently connect 
+            donors and recipients through structured data handling and robust backend logic. 
+            Alongside this, my home lab experiments reflect my hands-on, self-driven approach to learning 
+            — optimizing hardware, troubleshooting complex network issues, and engineering reliable systems 
+            from scratch.
+          </p>
+        </div>
+        {/* --- END CONTENT SECTION --- */}
 
         <div className="max-w-4xl space-y-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
@@ -114,13 +143,8 @@ export default function Home() {
               One Layer at a Time.
             </span>
           </h1>
-
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed font-light">
-            I’m <strong className="text-white font-semibold">Noel</strong>, a Systems Architect and Developer. I specialize in the bridge between <span className="text-sky-400">Linux infrastructure</span> and <span className="text-indigo-400">modern full-stack architecture</span>.
-          </p>
-
           <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={() => scrollToSection('logs')} className="px-8 py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:translate-y-[-2px] active:translate-y-[0px]">
+            <button onClick={() => scrollToSection('logs')} className="px-8 py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:-translate-y-0.5 active:translate-y-0">
               Access Expedition Logs
             </button>
             <button onClick={() => scrollToSection('toolbox')} className="px-8 py-3 bg-slate-900 border border-slate-800 hover:border-slate-700 text-white font-medium rounded-full transition-all hover:bg-slate-800">
