@@ -104,7 +104,22 @@ export default function Home() {
             Noel
           </div>
         </div>
-
+        <div className="max-w-4xl space-y-6">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
+            Navigating the Stack, <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">
+              One Layer at a Time.
+            </span>
+          </h1>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button onClick={() => scrollToSection('logs')} className="px-8 py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:-translate-y-0.5 active:translate-y-0">
+              Access Expedition Logs
+            </button>
+            <button onClick={() => scrollToSection('toolbox')} className="px-8 py-3 bg-slate-900 border border-slate-800 hover:border-slate-700 text-white font-medium rounded-full transition-all hover:bg-slate-800">
+              Technical Toolbox
+            </button>
+          </div>
+        </div>
         {/* --- CONSOLIDATED CONTENT SECTION --- */}
         <div className="max-w-3xl mx-auto space-y-6 text-slate-300 text-sm md:text-base leading-relaxed bg-slate-900/30 p-8 rounded-3xl border border-slate-800/50 backdrop-blur-sm">
           <p>
@@ -136,22 +151,6 @@ For me, technology is not just about writing code; it’s about creating solutio
         </div>
         {/* --- END CONTENT SECTION --- */}
 
-        <div className="max-w-4xl space-y-6">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white">
-            Navigating the Stack, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-400">
-              One Layer at a Time.
-            </span>
-          </h1>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={() => scrollToSection('logs')} className="px-8 py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-full transition-all shadow-[0_0_20px_rgba(14,165,233,0.3)] hover:-translate-y-0.5 active:translate-y-0">
-              Access Expedition Logs
-            </button>
-            <button onClick={() => scrollToSection('toolbox')} className="px-8 py-3 bg-slate-900 border border-slate-800 hover:border-slate-700 text-white font-medium rounded-full transition-all hover:bg-slate-800">
-              Technical Toolbox
-            </button>
-          </div>
-        </div>
       </section>
 
       {/* --- SKILLS SECTION (Toolbox) --- */}
