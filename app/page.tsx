@@ -38,28 +38,32 @@ export default function Home() {
       type: "MERN Stack Application",
       description: "A paywall-centric news portal engineered to deliver exclusive articles and premium media with secure user authentication and content access.",
       tech: ["MongoDB", "Express", "React", "Node.js"],
-      link: "https://whisper-wire-mu.vercel.app"
+      deployed: "https://whisper-wire-mu.vercel.app",
+      github: "https://github.com/Noellui/Whisper-wire"
     },
     {
       title: "Life Link",
-      type: "Development Project",
-      description: "A digital platform focused on streamlining connectivity and structured data handling. Currently in active development.",
-      tech: ["React", "Node.js", "Tailwind CSS"],
-      link: "https://github.com/noellouis/life-link"
+      type: "Full-Stack Project",
+      description: "A dual-purpose platform combining a Blood Donation Management System with a connectivity layer — streamlining donor-recipient matching through structured CRUD logic, Django backend, and a clean React interface.",
+      tech: ["React", "Django", "MySQL", "Tailwind CSS"],
+      deployed: null,
+      github: "https://github.com/Noellui/life-link"
     },
     {
       title: "Arivi Group",
       type: "Collaborative Project",
       description: "A collaborative web application aimed at building a scalable, functional digital solution for robust user experiences.",
       tech: ["Next.js", "React", "JavaScript"],
-      link: "https://github.com/noellouis/arivigroup"
+      deployed: null,
+      github: "https://github.com/noellouis/arivigroup"
     },
     {
-      title: "Blood Donor Management",
-      type: "Full-Stack Project",
-      description: "A complete CRUD application for managing donor data efficiently, architected with secure backend logic.",
-      tech: ["React", "Django", "MySQL"],
-      link: "#"
+      title: "Portfolio Explorer",
+      type: "Personal Project",
+      description: "This very site — a high-performance Next.js portfolio engineered with a custom design system, Tailwind CSS, and optimized for Vercel edge deployment.",
+      tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+      deployed: "/",
+      github: "https://github.com/Noellui/portfolio-exp"
     }
   ];
 
@@ -77,7 +81,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-sky-500 rounded-lg flex items-center justify-center font-bold text-slate-950 text-xl">N</div>
-            <span className="font-bold tracking-tight text-white">NOEL'S_EXPLORER_LOG</span>
+            <span className="font-bold tracking-tight text-white">NOEL&apos;S_EXPLORER_LOG</span>
           </div>
 
           <div className="flex items-center gap-6 text-sm font-medium">
@@ -140,14 +144,14 @@ export default function Home() {
           </p>
           <p>
             Beyond development, I have a strong interest in systems and networking. As a Linux power user,
-            I’ve configured Ubuntu home servers, customized Arch Linux on Mac hardware, and gained hands-on
+            I&apos;ve configured Ubuntu home servers, customized Arch Linux on Mac hardware, and gained hands-on
             experience in server administration. From managing user permissions to implementing secure
             remote access solutions with Tailscale, I enjoy understanding technology from the inside out
-            — and I’m always eager to explore more.
+            — and I&apos;m always eager to explore more.
           </p>
-          <p>Outside the world of coding, you’ll often find me on the badminton court, lost in a book, or listening to music.
+          <p>Outside the world of coding, you&apos;ll often find me on the badminton court, lost in a book, or listening to music.
 
-            For me, technology is not just about writing code; it’s about creating solutions that truly matter. And this is only the beginning of my journey in this ever-evolving world. Learning never stops — and neither do I.</p>
+            For me, technology is not just about writing code; it&apos;s about creating solutions that truly matter. And this is only the beginning of my journey in this ever-evolving world. Learning never stops — and neither do I.</p>
           <p className="pt-2 border-t border-slate-800/50 text-slate-400 italic">
             Among my key projects is a Blood Donation Management System, architected to efficiently connect
             donors and recipients through structured data handling and robust backend logic.
@@ -208,8 +212,8 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono text-sky-400 uppercase tracking-widest">{activity.date}</span>
                   <span className={`text-[10px] px-2 py-0.5 rounded-full border ${activity.status === 'Operational' ? 'border-emerald-500/30 text-emerald-400 bg-emerald-500/5' :
-                      activity.status === 'Active' ? 'border-sky-500/30 text-sky-400 bg-sky-500/5' :
-                        'border-slate-700 text-slate-500'
+                    activity.status === 'Active' ? 'border-sky-500/30 text-sky-400 bg-sky-500/5' :
+                      'border-slate-700 text-slate-500'
                     }`}>
                     {activity.status}
                   </span>
@@ -236,17 +240,17 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div key={index} className="group relative bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-sky-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.1)]">
+            <div key={index} className="group relative bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-sky-500/50 transition-all duration-500 hover:shadow-[0_0_30px_rgba(14,165,233,0.1)] flex flex-col">
               <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-100 transition-opacity">
                 <div className="w-4 h-4 border-t-2 border-r-2 border-sky-500 rounded-tr-sm"></div>
               </div>
 
-              <div className="space-y-4">
-                <span className="text-[10px] font-bold text-sky-500 uppercase tracking-tighter bg-sky-500/10 px-2 py-1 rounded">
+              <div className="space-y-4 flex flex-col flex-1">
+                <span className="text-[10px] font-bold text-sky-500 uppercase tracking-tighter bg-sky-500/10 px-2 py-1 rounded w-fit">
                   {project.type}
                 </span>
                 <h3 className="text-xl font-bold text-white group-hover:text-sky-400 transition-colors">{project.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed min-h-[60px]">{project.description}</p>
+                <p className="text-slate-400 text-sm leading-relaxed min-h-[60px] flex-1">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 pt-2">
                   {project.tech.map(t => (
@@ -254,9 +258,31 @@ export default function Home() {
                   ))}
                 </div>
 
-                <div className="pt-4">
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:gap-3 transition-all">
-                    PROJECT_VIEW <span className="text-sky-500">→</span>
+                {/* Dual link buttons */}
+                <div className="pt-4 flex items-center gap-3 flex-wrap">
+                  {project.deployed && (
+                    <a
+                      href={project.deployed}
+                      target={project.deployed === "/" ? "_self" : "_blank"}
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500/20 hover:border-sky-500/60 transition-all"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                      </svg>
+                      Live_Deploy
+                    </a>
+                  )}
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:border-slate-500 hover:text-white transition-all"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12" />
+                    </svg>
+                    Source_Code
                   </a>
                 </div>
               </div>
@@ -328,7 +354,7 @@ export default function Home() {
             <div className="flex flex-col gap-6 pt-12 md:pt-0">
               <div className="h-px bg-slate-900 w-full md:w-3/4"></div>
               <div className="flex items-center gap-6 justify-center md:justify-start">
-                <a href="https://github.com/noellouis" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-white transition-colors uppercase tracking-[0.2em] text-[10px]">GitHub_Repository</a>
+                <a href="https://github.com/Noellui" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-white transition-colors uppercase tracking-[0.2em] text-[10px]">GitHub_Repository</a>
                 <a href="#" className="text-slate-600 hover:text-white transition-colors uppercase tracking-[0.2em] text-[10px]">LinkedIn_Network</a>
                 <a href="#" className="text-slate-600 hover:text-white transition-colors uppercase tracking-[0.2em] text-[10px]">Curriculum_Vitae</a>
               </div>
